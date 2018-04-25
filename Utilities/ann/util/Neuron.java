@@ -7,7 +7,7 @@ package ann.util;
 
 public class Neuron {
 
-    public Neuron(double[] weights, double output) {
+    public Neuron(double[] weights) {
 
     }
 }
