@@ -5,10 +5,14 @@
 
 package ann.util;
 
-public class Activation {
+public interface Activation {
 
-    public static double logThreshold(double[] weights) {
-        return 0.0;
+    public static double logThreshold(double val, boolean derive) {
+        if(derive) {
+            return (val*(1-val));
+        } else {
+            return (1/(1+Math.exp(-val)));
+        }
     }
 
     public static double linThreshold(double[] weights) {
